@@ -17,10 +17,10 @@ voices=eng.getProperty('voices')
 eng.setProperty("voice", voices[0].id)
 
 #intro begins
-#eng.say(" hello deepak wELCOME TO VOICE BASED EMAIL")
-#eng.say("speak Send  if you wish to send an email ")
-#eng.say("speak  check if you wish Check inbox And read email")
-#eng.say("speak exit if you wish to Exit the System")
+eng.say(" hello deepak wELCOME TO VOICE BASED EMAIL")
+eng.say("speak Send  if you wish to send an email ")
+eng.say("speak  check if you wish Check inbox And read email")
+eng.say("speak exit if you wish to Exit the System")
 eng.say(" i am listening ")
 eng.runAndWait() 
 
@@ -34,7 +34,7 @@ print(input)
 
 # dictionary which contains username and their email address
 
-contacts={"abc":"abcexample@gmail.com","def":"defexample@yahoo.com","efg":"efgexample@outlook.com"}
+contacts={"abc":"abcexample@gmail.com","def":"defexample@yahoo.com","efg":"efgexample@outlook.com"}  # FILL ACCORDINGLY
 
 # when the program runs you are required to speak the username eg. abc    or   def.
 
