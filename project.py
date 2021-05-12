@@ -5,16 +5,14 @@
 
 # Must have internet connection to execute the code
 
-
 import pyttsx3         #library to use text to speech
 import email           #LIBRARY FOR SENDING MAIL    
-import speech_recognition as sr  # for recording audio
 import inputaudio
 
 eng=pyttsx3.init()
-eng.setProperty("rate",150)
+eng.setProperty("rate",200)
 voices=eng.getProperty('voices')
-eng.setProperty("voice", voices[0].id)
+eng.setProperty("voice", voices[1].id)
 
 #intro begins
 eng.say(" hello deepak wELCOME TO VOICE BASED EMAIL")
@@ -34,7 +32,8 @@ print(input)
 
 # dictionary which contains username and their email address
 
-contacts={"abc":"abcexample@gmail.com","def":"defexample@yahoo.com","efg":"efgexample@outlook.com"}  # FILL ACCORDINGLY
+contacts={"abc":"abcexample1@gmail.com","def":"defexample2@yahoo.com","ghi":"ghiexample3@outllok.com"}
+
 
 # when the program runs you are required to speak the username eg. abc    or   def.
 
@@ -117,16 +116,15 @@ elif input=="check" or input=="Check":
     mail_ids = []
     for block in data:
         mail_ids += block.split() 
-   
-
+   #b'1 2  34 5 6 7 8 9 10'
+    #[b'1,b'2,b'3-----,b'10]
    # the library had a loop to iterate over the entire list of mail id but here i have changed code little bit
    # Not running loop through the entire list . instead calculated the length of list
    #  and passed last element of list as it is our latest mail and passing it as argument to fetch function.
     
-    
     length=len(mail_ids)
     recent_mail=mail_ids[length-1]
-    
+
     status, data = mail.fetch(recent_mail, '(RFC822)')
     for response_part in data:
             if isinstance(response_part, tuple):
